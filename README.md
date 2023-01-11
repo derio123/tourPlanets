@@ -1,8 +1,6 @@
 # TourHeroes
 
-- Este projeto foi criado em angular e 
-* TourHeroes são fotos de herois da dc e marvel 
-* que futuramente poderam ser inserido.
+- Este projeto foi criado em angular e TourHeroes são fotos de herois da dc e marvel que futuramente poderam ser inserido.
 
 <div align='center'>
   <div>
