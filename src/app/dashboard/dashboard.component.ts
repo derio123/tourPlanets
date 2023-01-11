@@ -10,16 +10,17 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
   heroes: Hero[] = [];
+  title = 'Top Heroes';
 
-  constructor( private heroServe: HeroService) { }
+  constructor(private heroServe: HeroService) { }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
     this.getHeroes();
-   }
+  }
 
-   getHeroes() {
-     this.heroServe.getHeroes()
-     .subscribe(heroes => this.heroes = heroes.slice(0, 10));
-   }
+  getHeroes() {
+    this.heroServe.getHeroes()
+      .subscribe(heroes => this.heroes = heroes.slice(0, 8));
+  }
 
 }

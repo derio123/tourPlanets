@@ -1,5 +1,4 @@
 /* DashboardComponent's private CSS styles */
-
 h2 {
   text-align: center;
 }
@@ -11,7 +10,6 @@ h2 {
 
   /* flexbox */
   display: inline;
-  margin: 10px;
   margin-inline: 10px;
   justify-content: space-evenly;
   align-content: flex-end;
