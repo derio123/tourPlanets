@@ -27,7 +27,7 @@ button:disabled {
 }
 
 img {
-  width: 15%;
-  border-radius: 25px;
+  width: 100%;
+  border-radius: 5px;
   margin-bottom: 3%;
 }

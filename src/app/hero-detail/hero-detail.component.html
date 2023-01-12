@@ -1,14 +1,24 @@
-<div *ngIf="hero">
-	<h2>{{hero.name | uppercase }} Details</h2>
-	<div>
-		<div>
-			<img [src]="hero.img" alt="{{hero.name}}">
+<div *ngIf="hero" class="card text-bg-info mb-3 mt-3" style="max-width: 540px;">
+	<div class="row g-0">
+		<div class="col-md-4">
+			<img [src]="hero.img" alt="{{hero.name}}" class="img-fluid rounded-start">
 		</div>
-		<label for="hero-name">Hero name: </label>
-		<input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+		<div class="col-md-8">
+			<div class="card-body">
+				<h2></h2>
+				<h5 class="card-title">{{hero.name | uppercase }} Details</h5>
+				<!-- <input [(ngModel)]="hero.name" placeholder="name"> -->
+				<label for="">Hero name</label>
+				<p class="card-text" id="hero-name">{{hero.name}}</p>
+				<p class="card-text">
+					<small class="text-muted">
+						Last updated 3 mins ago
+					</small>
+				</p>
+			</div>
+		</div>
+		<div class="card-footer bg-transparent border-success text-center" (click)="goBack()">
+				Voltar
+		</div>
 	</div>
-
-	<button type="button" (click)="goBack()">
-	 Voltar
-	</button>
 </div>
