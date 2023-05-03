@@ -4,7 +4,7 @@
 
 <div align='center'>
   <div>
-    <img height='300px' width='auto' src='src/assets/tour3.png'/>
+    <img height='300px' width='auto' src='src/assets/tour3.jpeg'/>
   </div>
 </div>
 
