@@ -1877,6 +1877,13 @@ angular-feather@^6.5.0:
   dependencies:
     tslib "^2.0.0"
 
+angular-in-memory-web-api@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/angular-in-memory-web-api/-/angular-in-memory-web-api-0.16.0.tgz#04e380798a4c96682e7fa9de6f9a1d5254e6ad19"
+  integrity sha512-+1HAyB35V0VrCSbQHBdDi5V9M/9x3SXfOyh3pyL2Hg+ZmVBqosETElxRagRY3QsXCAb3YvxYiJaBSSmFlkxOMQ==
+  dependencies:
+    tslib "^2.3.0"
+
 ansi-colors@4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.1.1.tgz#cbb9ae256bf750af1eab344f229aa27fe94ba348"
