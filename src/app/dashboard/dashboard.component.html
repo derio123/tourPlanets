@@ -1,9 +1,9 @@
 <h2>{{title}} </h2>
+
+<app-hero-search></app-hero-search>
 <div *ngFor="let hero of heroes" class="heroes-menu">
     <a routerLink="/detail/{{hero.id}}">
         <img [src]="hero.img" alt="{{hero.name}}">
         <div class="imgHero">{{ hero.name }}</div>
     </a>
 </div>
-
-<app-hero-search></app-hero-search>

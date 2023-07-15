@@ -8,7 +8,6 @@ import { Hero } from '../../data/hero';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  selectedHero?: Hero;
 
   heroes: Hero[] = [];
   title = 'List of Heroes';
@@ -23,11 +22,6 @@ export class HeroesComponent implements OnInit {
   getHeroes(): void {
     this.heroServe.getHeroes()
       .subscribe(heroes => this.heroes = heroes);
-  }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageServe.add(`HeroesComponent: selecionado o Heroi ${hero.name} `)
   }
 
   add(name: string): void {

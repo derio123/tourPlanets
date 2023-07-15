@@ -6,22 +6,28 @@
 		<div class="col-md-8">
 			<div class="card-body">
 				<h2></h2>
-				<h5 class="card-title">{{hero.name | uppercase }} Details</h5>
-				<!-- <input [(ngModel)]="hero.name" placeholder="name"> -->
-				<label for="">Hero name</label>
-				<p class="card-text" id="hero-name">{{hero.name}}</p>
-				<p class="card-text">
-					<small class="text-muted">
-						Last updated 3 mins ago
-					</small>
-				</p>
+				<h5 class="card-title">{{hero.name | uppercase }} Detalhes</h5>
+				<div>
+					<label class="card-text" for="hero-name">Hero name: </label>
+					<input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name" />
+				</div>
+
+				<div>
+					<label class="card-text" for="hero-name">Power: </label>
+					<input id="hero-name" [(ngModel)]="hero.power" placeholder="Hero name" />
+				</div>
+				<!-- <div>
+					<label class="card-text" for="hero-name">Image Hero: </label>
+					<input type="file" class="file-input" accept="image/png, image/jpeg"
+						(change)="onFileSelected($event)">
+				</div> -->
 			</div>
 		</div>
 		<div class="card-footer bg-transparent border-success text-center" (click)="save()">
-				Salvar
+			Salvar
 		</div>
 		<div class="card-footer bg-transparent border-success text-center" (click)="goBack()">
-				Voltar
+			Voltar
 		</div>
 	</div>
 </div>

@@ -1,11 +1,11 @@
 import { Hero } from '../data/hero';
 
 export const HEROES: Hero[] = [
-	/* { id: 1, name: 'Yara', img: '../../assets/img/WWYara2.png' }, */
-	/* { id: 2, name: 'AERO (LEI LING)', img: '../../assets/img/Aero.png' }, */
-	/* { id: 3, name: 'Diana', img: '../../assets/img/WWDiana3.png' }, */
-	//{ id: 4, name: 'Arclight', img: '../../assets/img/Arclight.png' },
-	//{ id: 5, name: 'ASP', img: '../../assets/img/Asp.png' },
+	{ id: 1, name: 'Yara', img: '../../assets/img/WWYara2.png' },
+	{ id: 2, name: 'AERO (LEI LING)', img: '../../assets/img/Aero.png' },
+	{ id: 3, name: 'Diana', img: '../../assets/img/WWDiana3.png' },
+	{ id: 4, name: 'Arclight', img: '../../assets/img/Arclight.png' },
+	{ id: 5, name: 'ASP', img: '../../assets/img/Asp.png' },
 	{ id: 6, name: 'Elektra', img: '../../assets/img/elektra3.png' },
 	{ id: 7, name: 'Iron Man', img: '../../assets/img/ironman.png' },
 	{ id: 8, name: 'Captain America', img: '../../assets/img/captainAmerica.png' },
