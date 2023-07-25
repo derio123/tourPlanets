@@ -11,7 +11,7 @@
 </div>
 <div *ngFor="let hero of heroes" class="heroes-menu">
 	<a routerLink="/detail/{{hero.id}}">
-		<img [src]="hero.img" alt="{{hero.name}}">
+		<img class="tam" [src]="hero.img" alt="{{hero.name}}">
 		<span class="name">{{ hero.name }}</span>
 		<button type="button" class="delete" title="Deletar o heroi"
 		(click)="delete(hero)">x</button>
