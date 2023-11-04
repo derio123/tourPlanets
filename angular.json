@@ -102,5 +102,8 @@
       }
     }
   },
-  "defaultProject": "tour-heroes"
+  "defaultProject": "tour-heroes",
+  "cli": {
+    "analytics": false
+  }
 }
