@@ -9,6 +9,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './components/header/header.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { HeaderComponent } from './components/header/header.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    NgxPaginationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

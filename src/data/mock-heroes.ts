@@ -3,8 +3,8 @@ import { Hero } from '../data/hero';
 export const HEROES: Hero[] = [
 	/* { id: 1, name: 'Yara', img: '../../assets/img/WWYara2.png' }, */
 	/* { id: 2, name: 'AERO (LEI LING)', img: '../../assets/img/Aero.png' }, */
-	/* { id: 3, name: 'Diana', img: '../../assets/img/WWDiana3.png' }, */
-	//{ id: 4, name: 'Arclight', img: '../../assets/img/Arclight.png' },
+	{ id: 3, name: 'Diana', img: '../../assets/img/WWDiana3.png' },
+	{ id: 4, name: 'Arclight', img: '../../assets/img/Arclight.png' },
 	//{ id: 5, name: 'ASP', img: '../../assets/img/Asp.png' },
 	{ id: 6, name: 'Elektra', img: '../../assets/img/elektra3.png' },
 	{ id: 7, name: 'Iron Man', img: '../../assets/img/ironman.png' },
@@ -18,8 +18,5 @@ export const HEROES: Hero[] = [
 	{ id: 15, name: 'Scalet Witch', img: '../../assets/img/scaletwitch1.png' },
 	{ id: 16, name: 'Hulk', img: '../../assets/img/hulk.png' },
 
-	/* {id: 15, name: 'o', img: 'x' }, */
-	/* {id: 15, name: 'o', img: 'x' }, */
-	/* {id: 15, name: 'o', img: 'x' }, */
 	/* {id: 15, name: 'o', img: 'x' }, */
 ];
