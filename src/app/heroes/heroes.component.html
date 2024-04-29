@@ -6,14 +6,13 @@
 
 	<!-- (click) passes input value to add() and then clears the input -->
 	<button type="button" class="add-button" (click)="add(heroName.value); heroName.value=''">
-		+ 
+		+
 	</button>
 </div>
 <div *ngFor="let hero of heroes" class="heroes-menu">
-	<a routerLink="/detail/{{hero.id}}">
+	<a routerLink="/detail/{{hero.id}}" class="">
 		<img class="tam" [src]="hero.img" alt="{{hero.name}}">
 		<span class="name">{{ hero.name }}</span>
-		<button type="button" class="delete" title="Deletar o heroi"
-		(click)="delete(hero)">x</button>
 	</a>
+	<button type="button" class="delete" title="Deletar o heroi" (click)="delete(hero)">x</button>
 </div>
