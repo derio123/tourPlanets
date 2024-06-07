@@ -19,6 +19,16 @@ h2 {
 #new-hero {
   border-radius: 30px;
   border: solid #ccc;
+  margin-right: 5px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+#heroName {
+  margin-right: 5px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #c0c0c0;
 }
 
 .add-button {
