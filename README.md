@@ -8,9 +8,10 @@
   </div>
 </div>
 
-## Desenvolvimento em live
-Rode `npm install` para instalar e criar a pasta node_modules
+## Desenvolvimento no modo live
+   - Rode `npm install` Ou `yarn` para instalar e criar a pasta node_modules
 
-Rode `ng serve` para desenvolver em Live. 
-Navegue para `http://localhost:4200/`. 
+   - Rode `ng serve` ou `npm start` ou `yarn start` para desenvolver em Live. 
+
+   - Navegue para <a href="http://localhost:4200/">TourHeroes</a>. 
 
