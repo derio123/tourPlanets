@@ -1,16 +1,18 @@
 import { MessageService } from './messages/message.service';
 import { Injectable } from '@angular/core';
-import { Hero } from 'src/data/hero';
 
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, tap } from 'rxjs/operators';
+import { Planet } from 'src/data/planet';
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class HeroService {
 
-  private heroesUrl = 'api/heroes';
+  private planetsUrl = 'api/planets';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -20,69 +22,69 @@ export class HeroService {
     private http: HttpClient,
     private messageServe: MessageService) { }
 
-  getHeroes(): Observable<Hero[]> {
-    return this.http.get<Hero[]>(this.heroesUrl)
+  getPlanets(): Observable<Planet[]> {
+    return this.http.get<Planet[]>(this.planetsUrl)
       .pipe(
         tap(_ => this.log('fetched heroes')),
-        catchError(this.handleError<Hero[]>('getHeroes', [])),
+        catchError(this.handleError<Planet[]>('getPlanets', [])),
       );
   }
 
-  getHeroNo404<Data>(id: number): Observable<Hero> {
-    const url = `${this.heroesUrl}/${id}`;
-    return this.http.get<Hero[]>(url)
+  getHeroNo404<Data>(id: number): Observable<Planet> {
+    const url = `${this.planetsUrl}/${id}`;
+    return this.http.get<Planet[]>(url)
       .pipe(
         map(heroes => heroes[0]), // returns a {0|1} element array
         tap(h => {
           const outcome = h ? 'fetched' : 'did not find';
           this.log(`${outcome} hero id=${id}`);
         }),
-        catchError(this.handleError<Hero>(`getHero id=${id}`))
+        catchError(this.handleError<Planet>(`getPlanet id=${id}`))
       );
   }
 
-  getHero(id: number): Observable<Hero> {
-    const url = `${this.heroesUrl}/${id}`;
-    return this.http.get<Hero>(url)
+  getPlanet(id: number): Observable<Planet> {
+    const url = `${this.planetsUrl}/${id}`;
+    return this.http.get<Planet>(url)
       .pipe(
         tap(_ => this.log(`fetched hero id =${id}`)),
-        catchError(this.handleError<Hero>(`getHero ${id}`)),
+        catchError(this.handleError<Planet>(`getHero ${id}`)),
       )
   }
 
-  addHero(hero: Hero): Observable<Hero> {
-    return this.http.post<Hero>(this.heroesUrl, hero, this.httpOptions).pipe(
-      tap((newHero: Hero) => this.log(`added hero w/ id=${newHero.id}`)),
-      catchError(this.handleError<Hero>('addHero'))
+  addPlanet(planet: Planet): Observable<Planet> {
+    return this.http.post<Planet>(this.planetsUrl, planet, this.httpOptions).pipe(
+      tap((newPlanet: Planet) => this.log(`added hero w/ id=${newPlanet.id}`)),
+      catchError(this.handleError<Planet>('addPlanet'))
     );
   }
 
-  updateHero(hero: Hero): Observable<any> {
-    return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
-      tap(_ => this.log(`updated hero id=${hero.id}`)),
-      catchError(this.handleError<any>('updateHero'))
+  updatePlanet(planet: Planet): Observable<any> {
+    return this.http.put(this.planetsUrl, planet, this.httpOptions).pipe(
+      tap(_ => this.log(`updated hero id=${planet.id}`)),
+      catchError(this.handleError<any>('updatePlanet'))
     );
   }
 
-  deleteHero(id: number): Observable<Hero> {
-    const url = `${this.heroesUrl}/${id}`;
+  deleteHero(id: number): Observable<Planet> {
+    const url = `${this.planetsUrl}/${id}`;
 
-    return this.http.delete<Hero>(url, this.httpOptions).pipe(
-      tap(_ => this.log(`deleted hero id=${id}`)),
-      catchError(this.handleError<Hero>('deleteHero'))
+    return this.http.delete<Planet>(url, this.httpOptions).pipe(
+      tap(_ => this.log(`deleted Planet id=${id}`)),
+      catchError(this.handleError<Planet>('deletePlanet'))
     );
   }
 
-  searchHeroes(term: string): Observable<Hero[]> {
+  searchPlanets(term: string): Observable<Planet[]> {
     if (!term.trim()) {
-      // if not search term, return empty hero array.
+      // if not search term, return empty Planet array.
       return of([]);
     }
-    return this.http.get<Hero[]>(`${this.heroesUrl}/?name=${term}`).pipe(
+    return this.http.get<Planet[]>(`${this.planetsUrl}/?name=${term}`).pipe(
       tap(x => x.length ?
-        this.log(`found heroes matching "${term}"`) :
-        this.log(`no heroes matching "${term}"`)),
-      catchError(this.handleError<Hero[]>('searchHeroes', []))
+        this.log(`found planets matching "${term}"`) :
+        this.log(`no planets matching "${term}"`)),
+      catchError(this.handleError<Planet[]>('searchPlanets', []))
     );
   }
 

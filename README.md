@@ -1,10 +1,10 @@
-# TourHeroes
+# TourPlanets
 
-- Este projeto foi criado em angular e TourHeroes são fotos de herois da dc e marvel que futuramente poderam ser inserido.
+- Este projeto foi criado em angular e TourPlanets são fotos de planetas do sistema que futuramente poderam ser inserido.
 
 <div align='center'>
   <div>
-    <img height='300px' width='auto' src='src/assets/AppAtualizado.jpeg'/>
+    <img height='300px' width='auto' src='src/assets/AppAtualizado.png'/>
   </div>
 </div>
 

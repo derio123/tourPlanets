@@ -1,7 +1,8 @@
+import { planets } from './../../../data/mock-heroes';
+import { Planet } from './../../../data/planet';
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subject, debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
 import { HeroService } from 'src/app/service/hero.service';
-import { Hero } from 'src/data/hero';
 
 @Component({
   selector: 'app-hero-search',
@@ -10,7 +11,7 @@ import { Hero } from 'src/data/hero';
 })
 export class HeroSearchComponent implements OnInit {
 
-  heroes$!: Observable<Hero[]>;
+  planets$!: Observable<Planet[]>;
 
   private searchTerms = new Subject<string>();
 
@@ -22,10 +23,10 @@ export class HeroSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.heroes$ = this.searchTerms.pipe(
+    this.planets$ = this.searchTerms.pipe(
       debounceTime(300),
       distinctUntilChanged(),
-      switchMap((term: string) => this.heroServe.searchHeroes(term)),
+      switchMap((term: string) => this.heroServe.searchPlanets(term)),
     );
   }
 

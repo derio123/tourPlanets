@@ -1,20 +1,20 @@
-<div *ngIf="hero" class="card text-bg-info mb-3 mt-3" style="max-width: 540px;">
+<div *ngIf="planet" class="card text-bg-info mb-3 mt-3" style="max-width: 540px;">
 	<div class="row g-0">
 		<div class="col-md-4">
-			<img [src]="hero.img" alt="{{hero.name}}" class="img-fluid rounded-start">
+			<img [src]="planet.img" alt="{{planet.name}}" class="img-fluid rounded-start">
 		</div>
 		<div class="col-md-8">
 			<div class="card-body">
 				<h2></h2>
-				<h5 class="card-title">{{hero.name | uppercase }} Detalhes</h5>
+				<h5 class="card-title">{{planet.name | uppercase }} Detalhes</h5>
 				<div>
-					<label class="card-text" for="hero-name">Hero name: </label>
-					<input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name" />
+					<label class="card-text" for="hero-name">Planet name: </label>
+					<input id="hero-name" [(ngModel)]="planet.name" placeholder="Hero name" />
 				</div>
 
 				<div>
-					<label class="card-text" for="hero-name">Power: </label>
-					<input id="hero-name" [(ngModel)]="hero.power" placeholder="Hero name" />
+					<label class="card-text" for="hero-name">System: </label>
+					<input id="hero-name" [(ngModel)]="planet.system" placeholder="Hero name" />
 				</div>
 				<!-- <div>
 					<label class="card-text" for="hero-name">Image Hero: </label>

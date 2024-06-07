@@ -1,5 +1,5 @@
+import { Planet } from 'src/data/planet';
 import { HeroService } from './../service/hero.service';
-import { Hero } from 'src/data/hero';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,18 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  heroes: Hero[] = [];
-  title = 'Top Heroes';
+  planets: Planet[] = [];
+  title = 'Top Planets';
 
   constructor(private heroServe: HeroService) { }
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getPlanets();
   }
 
-  getHeroes() {
-    this.heroServe.getHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(0, 8));
+  getPlanets() {
+    this.heroServe.getPlanets()
+      .subscribe(planet => this.planets = planet.slice(0, 8));
   }
 
 }

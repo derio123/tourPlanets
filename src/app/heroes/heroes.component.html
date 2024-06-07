@@ -9,10 +9,10 @@
 		+
 	</button>
 </div>
-<div *ngFor="let hero of heroes" class="heroes-menu">
-	<a routerLink="/detail/{{hero.id}}" class="">
-		<img class="tam" [src]="hero.img" alt="{{hero.name}}">
-		<span class="name">{{ hero.name }}</span>
+<div *ngFor="let planet of planets" class="heroes-menu">
+	<a routerLink="/detail/{{planet.id}}" class="">
+		<img class="tam" [src]="planet.img" alt="{{planet.name}}">
+		<span class="name">{{ planet.name }}</span>
 	</a>
-	<button type="button" class="delete" title="Deletar o heroi" (click)="delete(hero)">x</button>
+	<button type="button" class="delete" title="Deletar o planet" (click)="delete(planet)">x</button>
 </div>

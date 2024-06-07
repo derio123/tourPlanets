@@ -1,7 +1,8 @@
 import { MessageService } from './../service/messages/message.service';
 import { HeroService } from './../service/hero.service';
 import { Component, OnInit } from '@angular/core';
-import { Hero } from '../../data/hero';
+import { Planet } from 'src/data/planet';
+
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -9,33 +10,33 @@ import { Hero } from '../../data/hero';
 })
 export class HeroesComponent implements OnInit {
 
-  heroes: Hero[] = [];
-  title = 'List of Heroes';
+  planets: Planet[] = [];
+  title = 'List of Planets';
 
   constructor(private heroServe: HeroService,
     private messageServe: MessageService) { }
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getPlanet();
   }
 
-  getHeroes(): void {
-    this.heroServe.getHeroes()
-      .subscribe(heroes => this.heroes = heroes);
+  getPlanet(): void {
+    this.heroServe.getPlanets()
+      .subscribe(planet => this.planets = planet);
   }
 
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.heroServe.addHero({ name } as Hero)
-      .subscribe(hero => {
-        this.heroes.push(hero);
+    this.heroServe.addPlanet({ name } as Planet)
+      .subscribe(planet => {
+        this.planets.push(planet);
       });
   }
 
-  delete(hero: Hero): void {
-    this.heroes = this.heroes.filter(h => h !== hero);
-    this.heroServe.deleteHero(hero.id).subscribe();
+  delete(planet: Planet): void {
+    this.planets = this.planets.filter(h => h !== planet);
+    this.heroServe.deleteHero(planet.id).subscribe();
   }
   /* getHeroes(): void {
     this.heroes = this.heroServe.getHeroes();

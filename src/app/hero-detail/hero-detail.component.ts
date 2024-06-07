@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Hero } from '../../data/hero';
 import { ActivatedRoute } from '@angular/router';
 import { HeroService } from '../service/hero.service';
 import { Location } from '@angular/common';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
+import { Planet } from 'src/data/planet';
 
 @Component({
   selector: 'app-hero-detail',
@@ -13,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class HeroDetailComponent implements OnInit {
 
-  hero: Hero | undefined;
+  planet: Planet | undefined;
   fileName = '';
 
   constructor(
@@ -24,12 +24,12 @@ export class HeroDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getHero();
+    this.getPlanet();
   }
 
-  getHero(): void {
+  getPlanet(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.heroServe.getHero(id).subscribe(hero => this.hero = hero);
+    this.heroServe.getPlanet(id).subscribe(hero => this.planet = hero);
   }
 
   goBack(): void {
@@ -37,8 +37,8 @@ export class HeroDetailComponent implements OnInit {
   }
 
   save(): void {
-    if (this.hero) {
-      this.heroServe.updateHero(this.hero)
+    if (this.planet) {
+      this.heroServe.updatePlanet(this.planet)
         .subscribe(() => this.goBack());
     }
   }

@@ -1,7 +1,7 @@
-export interface Hero {
+export interface Planet {
   id: number;
   name: string;
-  power: string;
+  system: string;
   img: string;
 }
 
