@@ -1,0 +1,16 @@
+services:
+  angular-dev:
+    build:
+      context: .
+      dockerfile: .dockefile.dev
+    container_name: angular14_dev
+    ports:
+      - "4200:4200"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    command: npm start
+
+  

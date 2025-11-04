@@ -1,0 +1,9 @@
+#angular-prod:
+    #build:
+      #context: .
+      #dockerfile: Dockerfile
+    #container_name: angular14_prod
+    #ports:
+      #- "8080:80"
+    #environment:
+      #- NODE_ENV=production
