@@ -1,7 +1,16 @@
 <h2>{{title}} </h2>
+
 <div *ngFor="let hero of heroes" class="heroes-menu">
 	<a routerLink="/detail/{{hero.id}}">
-		<img [src]="hero.img" alt="{{hero.name}}">
+		<img class="tam" [src]="hero.img" alt="{{hero.name}}">
 		<span class="name">{{ hero.name }}</span>
 	</a>
+</div>
+
+<div *ngFor="let hero of heroes" class="heroes-menu">
+	<a routerLink="/detail/{{hero.id}}" class="">
+		<img class="tam" [src]="hero.img" alt="{{hero.name}}">
+		<span class="name">{{ hero.name }}</span>
+	</a>
+	<!-- <button type="button" class="delete" title="Deletar o hero" (click)="delete(hero)">x</button> -->
 </div>
