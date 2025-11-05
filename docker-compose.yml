@@ -2,7 +2,7 @@ services:
   angular-dev:
     build:
       context: .
-      dockerfile: .dockefile.dev
+      dockerfile: Dockerfile.dev
     container_name: angular14_dev
     ports:
       - "4200:4200"
